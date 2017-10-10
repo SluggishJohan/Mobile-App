@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTModuleMethod.mm \
+  /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTModuleMethod.m \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTModuleMethod.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTBridgeMethod.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTBridgeModule.h \
@@ -22,7 +22,5 @@ dependencies: \
   /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
   /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
   /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
-  /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTCxxConvert.h \
-  /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTManagedPointer.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTParserUtils.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Profiler/RCTProfile.h

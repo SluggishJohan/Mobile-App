@@ -21,22 +21,22 @@ import {
 } from 'react-navigation';
 
 import * as firebase from 'firebase';
-// import {
-//   FB_API_KEY,
-//   FB_AUTH_DOMAIN,
-//   FB_DATABASE_URL,
-//   FB_STORAGE_BUCKET,
-// } from 'react-native-dotenv';
+import {
+  FB_API_KEY,
+  FB_AUTH_DOMAIN,
+  FB_DATABASE_URL,
+  FB_STORAGE_BUCKET,
+} from 'react-native-dotenv';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBKItqUFEiJH9rr_Y4pa9_Np-1d_m812II",
-  authDomain: "firereactbasenative.firebaseapp.com",
-  databaseURL: "https://mobile-app1-55dba.firebaseio.com",
-  storageBucket: ""
-    //  apiKey: FB_API_KEY,
-    //  authDomain: FB_AUTH_DOMAIN,
-    //  databaseURL: FB_DATABASE_URL,
-    //  storageBucket: FB_STORAGE_BUCKET,
+  // apiKey: "AIzaSyBKItqUFEiJH9rr_Y4pa9_Np-1d_m812II",
+  // authDomain: "firereactbasenative.firebaseapp.com",
+  // databaseURL: "https://mobile-app1-55dba.firebaseio.com",
+  // storageBucket: ""
+     apiKey: FB_API_KEY,
+     authDomain: FB_AUTH_DOMAIN,
+     databaseURL: FB_DATABASE_URL,
+     storageBucket: FB_STORAGE_BUCKET,
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 

@@ -1,5 +1,4 @@
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTCxxMethod.o
-/Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTShadowView+Internal.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTScrollContentViewManager.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTStatusBarManager.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTSourceCode.o
@@ -20,9 +19,9 @@
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTDevMenu.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTSamplingProfilerPackagerMethod.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTRootShadowView.o
+/Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTModuleMethod.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTMultipartDataTask.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTBorderDrawing.o
-/Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTCxxConvert.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTAssert.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTUIManagerObserverCoordinator.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTSlider.o
@@ -42,7 +41,6 @@
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTImageSource.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTCxxUtils.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTDatePickerManager.o
-/Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTModuleMethod.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTProfileTrampoline-x86_64.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTEventEmitter.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTJavaScriptLoader.o
@@ -55,10 +53,10 @@
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTScrollViewManager.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTTabBarManager.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTJSCSamplingProfiler.o
-/Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTManagedPointer.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTWrapperViewController.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTScrollView.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTReloadCommand.o
+/Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTShadowView+Hierarchy.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/JSCTracing.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTInspector.o
 /Users/selinali/Mobile-App/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/React.build/Objects-normal/x86_64/RCTAccessibilityManager.o

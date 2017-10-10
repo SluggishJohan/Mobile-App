@@ -36,19 +36,8 @@ private:
   folly::dynamic m_jscConfig;
 };
 
-template<typename T>
-struct JSCValueEncoder {
-  // If you get a build error here, it means the compiler can't see the template instantation of toJSCValue
-  // applicable to your type.
-  static const Value toJSCValue(JSGlobalContextRef ctx, T&& value);
-};
-
-template<>
-struct JSCValueEncoder<folly::dynamic> {
-  static const Value toJSCValue(JSGlobalContextRef ctx, const folly::dynamic &&value) {
-    return Value::fromDynamic(ctx, value);
-  }
-};
+template <typename T>
+struct ValueEncoder;
 
 class RN_EXPORT JSCExecutor : public JSExecutor {
 public:
@@ -80,7 +69,7 @@ public:
   Value callFunctionSync(
       const std::string& module, const std::string& method, T&& args) {
     return callFunctionSyncWithValue(
-      module, method, JSCValueEncoder<typename std::decay<T>::type>::toJSCValue(
+      module, method, ValueEncoder<typename std::decay<T>::type>::toValue(
         m_context, std::forward<T>(args)));
   }
 

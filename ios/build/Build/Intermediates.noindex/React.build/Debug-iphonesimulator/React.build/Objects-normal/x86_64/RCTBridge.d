@@ -20,7 +20,6 @@ dependencies: \
   /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
   /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTEventDispatcher.h \
-  /Users/selinali/Mobile-App/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTJSEnvironment.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTModuleData.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTPerformanceLogger.h \

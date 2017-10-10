@@ -385,11 +385,11 @@ dependencies: \
   /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/noncopyable.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/../third-party/folly-2016.09.26.00/folly/json.h \
   /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCHelpers.h \
-  /Users/selinali/Mobile-App/node_modules/react-native/ReactCommon/cxxreact/JSBigString.h \
-  /Users/selinali/Mobile-App/node_modules/react-native/ReactCommon/cxxreact/JSModulesUnbundle.h \
-  /Users/selinali/Mobile-App/node_modules/react-native/ReactCommon/cxxreact/MessageQueueThread.h \
   /Users/selinali/Mobile-App/node_modules/react-native/ReactCommon/cxxreact/MethodCall.h \
   /Users/selinali/Mobile-App/node_modules/react-native/ReactCommon/cxxreact/RecoverableError.h \
   /Users/selinali/Mobile-App/node_modules/react-native/ReactCommon/cxxreact/SystraceSection.h \
+  /Users/selinali/Mobile-App/node_modules/react-native/ReactCommon/cxxreact/MessageQueueThread.h \
+  /Users/selinali/Mobile-App/node_modules/react-native/ReactCommon/cxxreact/JSBigString.h \
+  /Users/selinali/Mobile-App/node_modules/react-native/ReactCommon/cxxreact/JSModulesUnbundle.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/../third-party/folly-2016.09.26.00/folly/Memory.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/../third-party/folly-2016.09.26.00/folly/MoveWrapper.h

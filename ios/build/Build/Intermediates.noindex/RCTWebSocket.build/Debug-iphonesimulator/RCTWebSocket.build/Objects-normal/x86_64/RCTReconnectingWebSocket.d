@@ -13,5 +13,4 @@ dependencies: \
   /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
   /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
   /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
-  /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/fishhook/fishhook.h \
   /Users/selinali/Mobile-App/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.h

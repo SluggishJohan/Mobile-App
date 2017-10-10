@@ -40,5 +40,5 @@ dependencies: \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Views/RCTShadowView.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Base/RCTRootViewInternal.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Views/RCTScrollableProtocol.h \
-  /Users/selinali/Mobile-App/node_modules/react-native/React/Views/RCTShadowView+Internal.h \
+  /Users/selinali/Mobile-App/node_modules/react-native/React/Views/RCTShadowView+Hierarchy.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/Modules/RCTUIManagerObserverCoordinator.h

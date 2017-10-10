@@ -21,6 +21,7 @@ dependencies: \
   /Users/selinali/Mobile-App/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/../Libraries/WebSocket/RCTReconnectingWebSocket.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/../Libraries/WebSocket/RCTSRWebSocket.h \
+  /Users/selinali/Mobile-App/node_modules/react-native/React/../Libraries/WebSocket/RCTWebSocketObserver.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/DevSupport/RCTPackagerConnectionBridgeConfig.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/DevSupport/RCTPackagerConnectionConfig.h \
   /Users/selinali/Mobile-App/node_modules/react-native/React/DevSupport/RCTReloadPackagerMethod.h \

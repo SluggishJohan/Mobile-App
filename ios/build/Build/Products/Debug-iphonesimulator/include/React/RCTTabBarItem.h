@@ -29,8 +29,4 @@
 @property (nonatomic, readonly) UITabBarItem *barItem;
 @property (nonatomic, copy) RCTBubblingEventBlock onPress;
 
-#if TARGET_OS_TV
-@property (nonatomic, assign) BOOL wasSelectedInJS;
-#endif
-
 @end
