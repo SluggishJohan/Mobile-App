@@ -29,9 +29,9 @@ import {
 } from 'react-native-dotenv';
 
 const firebaseConfig = {
-  // apiKey: "AIzaSyBKItqUFEiJH9rr_Y4pa9_Np-1d_m812II",
+  // apiKey: "AIzaSyC5biC528Kf8Vu2IjTI5c6Cbx_Z6argPIw",
   // authDomain: "firereactbasenative.firebaseapp.com",
-  // databaseURL: "https://mobile-app1-55dba.firebaseio.com",
+  // databaseURL: "https://mobile-app2.firebaseio.com",
   // storageBucket: ""
      apiKey: FB_API_KEY,
      authDomain: FB_AUTH_DOMAIN,
