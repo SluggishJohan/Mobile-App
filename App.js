@@ -20,9 +20,11 @@ import { StackNavigator } from 'react-navigation';
 
 import LoginScreen from './LoginScreen';
 import Memberarea from './Memberarea';
+import addSuccess from './addSuccess';
 
 
 export default StackNavigator({
   Login: { screen: LoginScreen },
   Memberarea: { screen: Memberarea},
+  addSuccess:{ screen: addSuccess},
 });

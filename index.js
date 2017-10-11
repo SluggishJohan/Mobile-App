@@ -4,8 +4,13 @@ import { AppRegistry,
   Text,
   View,
   Navigator } from 'react-native';
+  import {
+  StackNavigator,
+} from 'react-navigation';
 import App from './App';
+
 import Memberarea from './Memberarea';
+import addSuccess from './addSuccess';
 
 export default class Project extends Component {
   render() {
@@ -22,6 +27,8 @@ export default class Project extends Component {
               return(<App navigator = {navigator}/>);
             case 'Memberarea':
               return(<Memberarea navigator = {navigator}/>);
+              case 'addSuccess':
+              return(<addSuccess navigator = {navigator}/>);
 }
 
 
