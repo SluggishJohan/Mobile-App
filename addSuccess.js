@@ -37,7 +37,7 @@ export default class addSuccess extends Component<{}> {
 
 
 
-                <Button style={styles.newTest} onPress={this.newTest}>
+                <Button style={styles.newTest} onPress={this.newT}>
                   <Icon name='paper' />
                   <Text>Start Test</Text>
                 </Button>
@@ -74,13 +74,22 @@ export default class addSuccess extends Component<{}> {
   }
 
 
-//   login = () => {
-//     if(true) {
-//       this.props.navigation.navigate('Memberarea');
-//     } else {
-//       alert("Username or password not match, please try again!");
-//     }
-//   }
+  searchP = () => {
+
+    this.props.navigation.navigate('Options');
+    }
+
+
+
+    newT = () => {
+
+      this.props.navigation.navigate('newTest');
+      }
+
+      more = () => {
+
+        this.props.navigation.navigate('More');
+        }
  }
 
 const styles = StyleSheet.create({

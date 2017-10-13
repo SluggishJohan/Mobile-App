@@ -124,15 +124,15 @@ export default class Memberarea extends Component {
         <Footer >
           <FooterTab >
 
-            <Button vertical active style={styles.tab}>
-              <Icon name="person" />
-              <Text>Patient</Text>
+            <Button vertical active  onPress={this.searchP}>
+              <Icon name="paper"/>
+              <Text>Records</Text>
             </Button>
-            <Button vertical active style={styles.tab}>
+            <Button vertical active onPress={this.newT}>
               <Icon active name="paper" />
               <Text>New Test</Text>
             </Button>
-            <Button vertical active style={styles.tab}>
+            <Button vertical active onPress={this.more}>
               <Icon name="apps" />
               <Text>More</Text>
             </Button>
@@ -145,12 +145,27 @@ export default class Memberarea extends Component {
 
   }
 
-
-
   add = () => {
 
     this.props.navigation.navigate('addSuccess');
     }
+
+  searchP = () => {
+
+    this.props.navigation.navigate('Options');
+    }
+
+
+
+    newT = () => {
+
+      this.props.navigation.navigate('newTest');
+      }
+
+      more = () => {
+
+        this.props.navigation.navigate('More');
+        }
 
   clear = () => {
 
@@ -192,9 +207,7 @@ left:0,
     marginTop: 25,
      color: "rgba(30,50,59,1)",
             fontSize: 12,
-
             fontWeight: "normal",
-
             fontFamily: 'Helvetica Neue',
   },
   choice:{
@@ -205,13 +218,11 @@ left:0,
             fontFamily: 'Helvetica Neue',
 
   },
-
 searchButton:{
 backgroundColor:'#ebf4f6',
 marginLeft:3,
 borderWidth:1,
 borderColor:"rgba(30,50,59,1)",
-
 },
 
   input:{
@@ -227,14 +238,12 @@ borderColor:"rgba(30,50,59,1)",
 
 
   lowerButtonContainer:{
-
     borderColor:'#fff',
     backgroundColor:'rgba(30,50,59,0.5)',
    justifyContent:'space-between',
     alignSelf:'center',
     margin:10,
     padding:10,
-
     height:40,
 
   },
@@ -243,19 +252,15 @@ borderColor:"rgba(30,50,59,1)",
     flexDirection:'row',
     backgroundColor:'rgba(30,50,59,0)',
     alignItems: 'center',
-
   },
 
   decision:{
-
 flex: 1,
 flexDirection: 'row',
-
-
   },
 
   add:{
-height:30,
+ height:30,
   backgroundColor:'#4286f4',
   width: 120,
   margin:1,
@@ -263,7 +268,7 @@ height:30,
   },
 
   clear:{
-height:30,
+  height:30,
   backgroundColor:'#f44144',
   width: 120,
   margin:1,
