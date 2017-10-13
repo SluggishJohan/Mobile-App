@@ -114,7 +114,7 @@ export default class LoginScreen extends Component<{}> {
 const styles = StyleSheet.create({
      container: {
        flex:1,
-
+alignSelf:'stretch',
      },
   backgroundImage:{
     flex:1,
