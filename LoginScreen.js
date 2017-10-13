@@ -20,6 +20,26 @@ import {
   StackNavigator,
 } from 'react-navigation';
 
+import * as firebase from 'firebase';
+import {
+  FB_API_KEY,
+  FB_AUTH_DOMAIN,
+  FB_DATABASE_URL,
+  FB_STORAGE_BUCKET,
+} from 'react-native-dotenv';
+
+const firebaseConfig = {
+  // apiKey: "AIzaSyC5biC528Kf8Vu2IjTI5c6Cbx_Z6argPIw",
+  // authDomain: "firereactbasenative.firebaseapp.com",
+  // databaseURL: "https://mobile-app2.firebaseio.com",
+  // storageBucket: ""
+     apiKey: FB_API_KEY,
+     authDomain: FB_AUTH_DOMAIN,
+     databaseURL: FB_DATABASE_URL,
+     storageBucket: FB_STORAGE_BUCKET,
+};
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
 
 export default class LoginScreen extends Component<{}> {
   render() {
@@ -30,8 +50,23 @@ export default class LoginScreen extends Component<{}> {
             <View style={styles.inputContainer}>
               <Text style={styles.logo1}>Royal Adelaide Hospital</Text>
               <Text style={styles.logo2}>Test Management System</Text>
-              <TextInput underlineColorIos='transparent' style={styles.input} placeholder='username'/>
-              <TextInput secureTextEntry={true} underlineColorIos='transparent' style={styles.input} placeholder='password'/>
+              <TextInput
+                   underlineColorIos='transparent'
+                   style={styles.input}
+                   placeholder='username'
+                   value={this.state.email}
+                   onChangeText={email => this.setState({ email })}
+              />
+              <TextInput
+                   secureTextEntry={true}
+                   underlineColorIos='transparent'
+                   style={styles.input}
+                   placeholder='password'
+                   autoCorrect={false}
+                   secureTextEntry
+                        value={this.state.password}
+                        onChangeText={password => this.setState({ password })}
+              />
             </View>
             <TouchableOpacity onPress={this.login} style={styles.buttonContainer}>
               <Text style={styles.buttonText}>LOGIN</Text>
@@ -45,15 +80,34 @@ export default class LoginScreen extends Component<{}> {
   constructor(props) {
     super(props);
 
-    this.state={username: '', password: ''};
+    this.state={username: '', password: '', error: '', loading: false};
   }
 
   login = () => {
-    if(true) {
-      this.props.navigation.navigate('Memberarea');
-    } else {
-      alert("Username or password not match, please try again!");
-    }
+
+    this.setState({ error: '', loading: true });
+
+    const { email, password } = this.state;
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(() => { this.setState({ error: '', loading: false });
+                          this.props.navigation.navigate('Memberarea');
+                        })
+            .catch(() => {
+                //Login was not successful, let's create a new account
+                // firebase.auth().createUserWithEmailAndPassword(email, password)
+                //     .then(() => { this.setState({ error: '', loading: false }); })
+                //     .catch(() => {
+                        this.setState({ error: 'Authentication failed.', loading: false });
+                        alert("Authentication failed, please try again!")
+                    // });
+            });
+
+    // if(true) {
+    //   this.props.navigation.navigate('Memberarea');
+    // } else {
+    //   alert("Username or password not match, please try again!");
+    // }
   }
 }
 

@@ -34,7 +34,7 @@ export default class Project extends Component {
     );
   }
 
-    navigatorRenderScene(route, navigator){
+    navigatorRenderScene(route, navigator) {
        _navigator = navigator;
        switch(route.id){
           case 'App':
