@@ -1,3 +1,6 @@
 node_modules
 ios/build
 .env
+ios/build
+.env
+node_modules/
