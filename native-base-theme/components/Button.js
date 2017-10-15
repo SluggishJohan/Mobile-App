@@ -413,9 +413,10 @@ export default (variables = variable) => {
 
 		"NativeBase.Icon": {
 			color: variables.inverseTextColor,
-			fontSize: 24,
-			marginHorizontal: 16,
-			paddingTop: platform === "ios" ? 2 : undefined,
+			fontSize: 20,
+			//marginHorizontal: 16,
+			//marginLeft:7,
+			//paddingTop: platform === "ios" ? 2 : undefined,
 		},
 		"NativeBase.IconNB": {
 			color: variables.inverseTextColor,

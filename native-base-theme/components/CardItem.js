@@ -25,7 +25,7 @@ export default (variables = variable) => {
 			},
 			'NativeBase.Text': {
 				marginLeft: 10,
-				alignSelf: 'center',
+				alignSelf: 'flex-start',
 			},
 			'NativeBase.Button': {
 				'.transparent': {
@@ -49,7 +49,7 @@ export default (variables = variable) => {
 			},
 			flex: 1,
 			flexDirection: 'row',
-			alignItems: 'center',
+			alignItems: 'flex-start',
 		},
 
 		'.content': {
@@ -202,7 +202,7 @@ export default (variables = variable) => {
 			borderColor: variables.cardBorderColor,
 		},
 		flexDirection: 'row',
-		alignItems: 'center',
+		alignItems: 'flex-start',
 		borderRadius: 2,
 		padding: variables.listItemPadding + 5,
 		paddingVertical: variables.listItemPadding,

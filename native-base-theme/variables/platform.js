@@ -22,7 +22,7 @@ export default {
   badgePadding: platform === "ios" ? 3 : 0,
 
   // Button
-  btnFontFamily: platform === "ios" ? "System" : "Roboto_medium",
+  btnFontFamily: platform === "ios" ? "Apple SD Gothic Neo" : "Roboto_medium",
   btnDisabledBg: "#b5b5b5",
   btnDisabledClr: "#f1f1f1",
 
@@ -105,7 +105,7 @@ export default {
   },
 
   // Card
-  cardDefaultBg: "#fff",
+  cardDefaultBg: "rgba(0,0,0,0)",
 
   // Color
   brandPrimary: platform === "ios" ? "#007aff" : "#3F51B5",
@@ -142,7 +142,7 @@ export default {
   tabActiveBgColor: platform === "ios" ? "#F5F5F5" : "#3F51B5",
 
   // Tab
-  tabDefaultBg: platform === "ios" ? "#F8F8F8" : "#3F51B5",
+  tabDefaultBg: platform === "ios" ? "#F5F5F5" : "#3F51B5",
   topTabBarTextColor: platform === "ios" ? "#6b6b6b" : "#b3c7f9",
   topTabBarActiveTextColor: platform === "ios" ? "#007aff" : "#fff",
   topTabActiveBgColor: platform === "ios" ? "#cde1f9" : undefined,
@@ -152,11 +152,11 @@ export default {
   // Header
   toolbarBtnColor: platform === "ios" ? "#007aff" : "#fff",
   toolbarDefaultBg: platform === "ios" ? "#F8F8F8" : "#3F51B5",
-  toolbarHeight: platform === "ios" ? 64 : 56,
-  toolbarIconSize: platform === "ios" ? 20 : 22,
-  toolbarSearchIconSize: platform === "ios" ? 20 : 23,
-  toolbarInputColor: platform === "ios" ? "#CECDD2" : "#fff",
-  searchBarHeight: platform === "ios" ? 30 : 40,
+  toolbarHeight: platform === "ios" ? 60 : 56,
+  toolbarIconSize: platform === "ios" ? 16 : 22,
+  toolbarSearchIconSize: platform === "ios" ? 16 : 23,
+  toolbarInputColor: platform === "ios" ? "#E0E0E0" : "#fff",
+  searchBarHeight: platform === "ios" ? 24 : 40,
   toolbarInverseBg: "#222",
   toolbarTextColor: platform === "ios" ? "#000" : "#fff",
   toolbarDefaultBorder: platform === "ios" ? "#a7a6ab" : "#3F51B5",
@@ -167,9 +167,9 @@ export default {
 
   // Icon
   iconFamily: "Ionicons",
-  iconFontSize: platform === "ios" ? 30 : 28,
-  iconMargin: 7,
-  iconHeaderSize: platform === "ios" ? 33 : 24,
+  iconFontSize: platform === "ios" ? 20 : 28,
+  iconMargin: 0,
+  iconHeaderSize: platform === "ios" ? 20 : 24,
 
   // InputGroup
   inputFontSize: 17,

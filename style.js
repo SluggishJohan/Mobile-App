@@ -83,6 +83,7 @@ var style = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems:'center',
+        backgroundColor: '#F5F5F5',
     },
 
     tabButton:{
@@ -104,10 +105,8 @@ var style = StyleSheet.create({
 
     contentContainer: {
         flex: 11,
-        borderWidth: 1,
-        borderColor: 'rgba(213,0,0,1)',
-
-        //justifyContent: 'space-around',
+ /*       borderWidth: 1,
+        borderColor: 'rgba(213,0,0,1)',*/
     },
 
     headerContainer: {
@@ -125,30 +124,25 @@ var style = StyleSheet.create({
     },
 
     lookup_container_NewTest: {
-        height:150,
+        height: 80,
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: 10,
-        borderWidth: 1,
-        borderColor: 'rgba(213,0,0,1)',
+        //alignItems: 'center',
+/*        borderWidth: 1,
+        borderColor: 'rgba(213,0,0,1)',*/
     },
 
     addNewPatient_NewTest:{
-        height:650,
-        /*flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: 10,*/
-        borderWidth: 1,
-        borderColor: 'rgba(213,0,0,1)',
+        height:805,
+/*        borderWidth: 1,
+        borderColor: 'rgba(213,0,0,1)',*/
     },
 
     twoButtons_NewTest:{
         height:40,
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center',
+        //alignItems: 'center',
     },
 
     heading_1: {

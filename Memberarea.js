@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {
     AppRegistry,
     StyleSheet,
-    Text,
+    //Text,
     View,
     ScrollView,
     AsyncStorage,
@@ -15,10 +15,23 @@ import {
 } from 'react-navigation';
 import style from './style';
 import {
-    Container, Header, Item, Input, Icon, Content, Footer, FooterTab,
+    Container,
+    Body,
+    Header,
+    Item,
+    Input,
+    Icon,
+    Content,
+    Footer,
+    FooterTab,
     Button,
     Badge,
     StyleProvider,
+    Text,
+    Card,
+    CardItem,
+    List, ListItem,
+    Separator,
 } from 'native-base';
 
 import getTheme from './native-base-theme/components';
@@ -36,7 +49,9 @@ var Gender = t.enums({
 var Person = t.struct({
     FirstName: t.String,              // a required string
     LastName: t.String,           // a required string
-    DOB: t.String,
+    Year: t.String,
+    Month: t.String,
+    Day: t.String,
     Gender: Gender,
     Phone: t.String,
     Email: t.String,
@@ -45,8 +60,6 @@ var Person = t.struct({
     PostCode: t.String,
     State: t.String,
 });
-
-
 
 
 var options = {
@@ -59,9 +72,17 @@ var options = {
             label: 'Last Name', // <= label for the name field
             placeholder: 'Last Name',
         },
-        DOB: {
-            label: 'Date of Birth', // <= label for the name field
-            //placeholder: 'DOB: YYYY-MM-DD',
+        Year: {
+            label: 'DoB Year', // <= label for the name field
+            placeholder: 'YYYY',
+        },
+        Month: {
+            label: 'Month',
+            placeholder: 'MM',
+        },
+        Day: {
+            label: 'Day',
+            placeholder: 'DD',
         },
         Gender: {
             label: 'Gender', // <= label for the name field
@@ -87,7 +108,7 @@ var options = {
             label: 'Post Code', // <= label for the name field
             placeholder: 'eg.1234',
         },
-        State:{
+        State: {
             label: 'State', // <= label for the name field
             placeholder: 'SA',
         }
@@ -99,7 +120,8 @@ var options = {
 export default class Memberarea extends Component {
     static navigationOptions = {
         title: 'NewTest',
-        header: null,
+        //header: null,
+        headerLeft: null,
     };
 
     render() {
@@ -109,54 +131,54 @@ export default class Memberarea extends Component {
 
                 <View style={style.contentContainer}>
                     <ScrollView>
-                        <Container style={style.lookup_container_NewTest}>
-                            <Text>
-                                Look Up Existing Patient
-                            </Text>
-                            <Header searchBar rounded style={styles.searchBar}>
-                                <Item>
-                                    <Icon name="ios-search"/>
-                                    <Input placeholder="Search"/>
-                                    <Icon name="ios-people"/>
-                                </Item>
-                                <Button small primary style={styles.searchButton}>
-                                    <Text>Search</Text>
+                        <StyleProvider style={getTheme(platform)}>
+                            <Container style={style.lookup_container_NewTest}>
+                                <Separator bordered>
+                                    <Text>Look Up Existing Patient</Text>
+                                </Separator>
+                                <ListItem searchBar rounded style={styles.searchBar}>
+                                    <Item>
+                                        <Icon name="ios-people"/>
+                                        <Input style={{fontSize: 10}} placeholder="Name Here"/>
+                                        <Icon name="ios-search"/>
+                                    </Item>
+
+                                </ListItem>
+                            </Container>
+                        </StyleProvider>
+
+                        <StyleProvider style={getTheme(platform)}>
+                            <Container style={style.addNewPatient_NewTest}>
+                                <Separator bordered>
+                                    <Text>Add New Patient</Text>
+                                </Separator>
+
+                                <View style={style.form_Container}>
+                                    <Form
+                                        ref="form"
+                                        type={Person}
+                                        options={options}
+                                        /*onChangeText{()=>{}}
+                                        onSubmitEditing{()=>{}}*/
+                                    />
+                                </View>
+                            </Container>
+                        </StyleProvider>
+
+                        <StyleProvider style={getTheme(platform)}>
+                            <Container style={style.twoButtons_NewTest}>
+
+                                <Button style={styles.add} onPress={this.add}>
+                                    <Icon style={styles.addIcon} name='ios-add-circle'/>
+                                    <Text style={styles.buttonText}>Save</Text>
                                 </Button>
-                            </Header>
-                        </Container>
+                                <Button style={styles.clear} onPress={this.clear}>
+                                    <Icon style={styles.clearIcon} name='trash'/>
+                                    <Text style={styles.buttonText}>Clear</Text>
+                                </Button>
 
-                        <Container style={style.addNewPatient_NewTest}>
-
-
-                            <Text
-                                style={styles.choice}>
-                                Add New Patient
-                            </Text>
-
-                            <View style={style.form_Container}>
-                                <Form
-                                    ref="form"
-                                    type={Person}
-                                    options={options}
-                                    /*onChangeText{()=>{}}
-                                    onSubmitEditing{()=>{}}*/
-                                />
-                            </View>
-
-                        </Container>
-
-                        <Container style={style.twoButtons_NewTest}>
-
-                            <Button style={styles.add} onPress={this.add}>
-                                <Icon name='ios-add-circle'/>
-                                <Text>Save</Text>
-                            </Button>
-                            <Button style={styles.clear} onPress={this.clear}>
-                                <Icon name='trash'/>
-                                <Text>Clear</Text>
-                            </Button>
-
-                        </Container>
+                            </Container>
+                        </StyleProvider>
                     </ScrollView>
                 </View>
 
@@ -167,10 +189,9 @@ export default class Memberarea extends Component {
                         <Footer>
                             <FooterTab>
                                 <Button vertical active onPress={this.newT}>
-                                    <Icon active style={style.tabButton_Icon}  name="paper"/>
+                                    <Icon active style={style.tabButton_Icon} name="paper"/>
                                     <Text style={style.tabButton_Text}>New Test </Text>
                                 </Button>
-
                                 <Button vertical active onPress={this.searchP}>
                                     <Icon style={style.tabButton_Icon} name="paper"/>
                                     <Text style={style.tabButton_Text}>Records</Text>
@@ -223,91 +244,45 @@ export default class Memberarea extends Component {
 }
 
 const styles = StyleSheet.create({
-    topBar: {
-        flex: 1,
-        alignSelf: "center",
-        backgroundColor: '#ebf4f6',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
 
-
-    welcome: {
-        marginTop: 25,
-        color: "rgba(30,50,59,1)",
-        fontSize: 12,
-        fontWeight: "normal",
-        fontFamily: 'Helvetica Neue',
-    },
-
-    searchButton: {
-        backgroundColor: '#ebf4f6',
-        marginLeft: 3,
-        borderWidth: 1,
-        borderColor: "rgba(30,50,59,1)",
-    },
-
-    input: {
-        height: 25,
-        width: 200,
-        borderRadius: 5,
-        borderWidth: 1,
-        textAlign: 'center',
-        margin: 3,
-        alignSelf: 'center',
-        borderColor: "rgba(30,50,59,0.5)",
-    },
-
-
-    lowerButtonContainer: {
-        borderColor: '#fff',
-        backgroundColor: 'rgba(30,50,59,0.5)',
-        justifyContent: 'space-between',
-        alignSelf: 'center',
-        margin: 10,
-        padding: 10,
-        height: 40,
-
-    },
     searchBar: {
-        width: 320,
-        flexDirection: 'row',
+        width: '100%',
         backgroundColor: 'rgba(30,50,59,0)',
-        alignItems: 'center',
     },
 
-    decision: {
-        flex: 1,
-        flexDirection: 'row',
-    },
 
     add: {
-        height: 30,
-        backgroundColor: '#4286f4',
-        width: 120,
-        margin: 1,
+        height: 25,
+        backgroundColor: '#0277BD',
+        width: 100,
+        marginRight: 7,
         justifyContent: 'center'
     },
 
     clear: {
-        height: 30,
-        backgroundColor: '#f44144',
-        width: 120,
-        margin: 1,
+        height: 25,
+        backgroundColor: '#BDBDBD',
+        width: 100,
+        marginLeft: 7,
         justifyContent: 'center'
     },
 
-    bottomBar: {
+    addIcon: {
+        fontSize: 15,
+        margin: 0,
+        padding: 0,
+    },
 
-        alignItems: 'stretch',
-        flexDirection: 'row',
+    clearIcon: {
+        fontSize: 18,
+    },
 
-        justifyContent: 'space-between',
+    buttonText: {
+        padding: 4,
+        color: '#fff',
+        fontWeight: 'bold',
+        margin: 0,
+        fontSize: 10,
     },
 
 })

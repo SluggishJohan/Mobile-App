@@ -54,4 +54,8 @@ export default StackNavigator({
   Options: {screen: Options},
   More: {screen: More},
 
+}, {
+    header: {
+        left: null,
+    }
 });

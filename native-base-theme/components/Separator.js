@@ -3,11 +3,11 @@ import variable from './../variables/platform';
 export default (variables = variable) => {
 	const theme = {
 		'.group': {
-			height: 50,
+			height: 30,
 			paddingVertical: variables.listItemPadding - 8,
 			paddingTop: variables.listItemPadding + 12,
 			'.bordered': {
-				height: 50,
+				height: 30,
 				paddingVertical: variables.listItemPadding - 8,
 				paddingTop: variables.listItemPadding + 12,
 			},
@@ -20,15 +20,16 @@ export default (variables = variable) => {
 				borderBottomWidth: 0,
 			},
 			height: 35,
-			paddingTop: variables.listItemPadding + 2,
+			paddingTop: variables.listItemPadding,
 			paddingBottom: variables.listItemPadding,
 			borderBottomWidth: variables.borderWidth,
 			borderTopWidth: variables.borderWidth,
 			borderColor: variables.listBorderColor,
 		},
 		'NativeBase.Text': {
-			fontSize: variables.tabBarTextSize - 2,
-			color: '#777',
+			fontSize: 14,
+			color: 'rgba(97, 97, 97, 0.9)',
+			fontFamily:'Apple SD Gothic Neo',
 		},
 		'.noTopBorder': {
 			borderTopWidth: 0,
@@ -36,7 +37,7 @@ export default (variables = variable) => {
 		'.noBottomBorder': {
 			borderBottomWidth: 0,
 		},
-		height: 38,
+		height: 35,
 		backgroundColor: '#F0EFF5',
 		flex: 1,
 		justifyContent: 'center',
