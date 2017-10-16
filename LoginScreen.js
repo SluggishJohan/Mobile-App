@@ -4,6 +4,7 @@
  * @flow
  */
 
+
 import React, {Component} from 'react';
 import {
     Platform,
@@ -79,9 +80,6 @@ export default class LoginScreen extends Component<{}> {
                             />
                         </View>
                         <View style={style.buttonContainer_Login}>
-                            {/*<TouchableOpacity onPress={this.login} style={styles.buttonContainer}>
-                                <Text style={styles.buttonText}>LOGIN</Text>
-                            </TouchableOpacity>*/}
 
                             <Button
                                 raised
@@ -136,3 +134,5 @@ export default class LoginScreen extends Component<{}> {
         // }
     }
 }
+
+

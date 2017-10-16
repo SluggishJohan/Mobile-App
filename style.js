@@ -40,7 +40,7 @@ var style = StyleSheet.create({
         textAlign: 'center',
         fontSize: 26,
         margin: 8,
-        fontFamily: 'Times New Roman',//Helvetica Neue
+        fontFamily: 'Apple SD Gothic Neo',//Helvetica Neue
         fontWeight: 'bold',
         marginBottom: 15,
     },
@@ -48,7 +48,7 @@ var style = StyleSheet.create({
         color: 'white',
         fontSize: 15,
         textAlign: 'center',
-        fontFamily: 'Times New Roman',
+        fontFamily: 'Apple SD Gothic Neo',
         fontWeight: 'bold',
         marginBottom: 15,
     },
@@ -125,7 +125,7 @@ var style = StyleSheet.create({
     },
 
     addNewPatient_NewTest:{
-        height:805,
+        height:785,
 /*        borderWidth: 1,
         borderColor: 'rgba(213,0,0,1)',*/
     },
@@ -136,6 +136,40 @@ var style = StyleSheet.create({
         justifyContent: 'center',
         //alignItems: 'center',
     },
+
+    Button_Icon: {
+        fontSize: 18,
+        margin: 0,
+        padding: 0,
+    },
+
+    Success_Image: {
+        marginTop: 30,
+        margin: 10,
+        height: 130,
+        width: 130,
+        alignSelf: 'center',
+    },
+
+    Success_Instruction: {
+        color: "rgba(30,50,59,1)",
+        fontSize: 17,
+        margin: 10,
+        fontFamily: 'Apple SD Gothic Neo',
+        alignSelf: 'center',
+        fontWeight: 'bold',
+    },
+
+    Success_Text: {
+        color: "rgba(30,50,59,1)",
+        fontSize: 45,
+        marginTop: 10,
+        margin: 8,
+        fontWeight: "normal",
+        fontFamily: 'Apple SD Gothic Neo',
+        alignSelf: 'center',
+    },
+
 
     heading_1: {
         fontSize: 20,

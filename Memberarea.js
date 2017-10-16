@@ -44,18 +44,13 @@ var t = require('tcomb-form-native');
 
 var Form = t.form.Form;
 
-var Gender = t.enums({
-    M: 'Male',
-    F: 'Female'
-});
-
 var Person = t.struct({
     FirstName: t.String,              // a required string
     LastName: t.String,           // a required string
     Year: t.String,
     Month: t.String,
     Day: t.String,
-    Gender: Gender,
+    Gender: t.String,
     Phone: t.String,
     Email: t.String,
     Address_Line1: t.String,
@@ -206,7 +201,7 @@ export default class Memberarea extends Component {
                         <Footer>
                             <FooterTab>
                                 <Button vertical active onPress={this.newT}>
-                                    <Icon active style={style.tabButton_Icon} name="paper"/>
+                                    <Icon active style={style.tabButton_Icon} name="person"/>
                                     <Text style={style.tabButton_Text}>New Test </Text>
                                 </Button>
                                 <Button vertical onPress={this.searchP}>
