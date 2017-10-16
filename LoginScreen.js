@@ -9,6 +9,7 @@ import {
     TextInput,
     DatePickerIOS,
     TouchableOpacity,
+    ScrollView,
 } from 'react-native'
 import {
     StackNavigator,
@@ -38,6 +39,149 @@ import {
 import style from './style';
 import getTheme from './native-base-theme/components';
 import platform from './native-base-theme/variables/platform';
+import MenuList from './MenuStyle';
+
+var data = {
+    "Category": {
+        "Test Type": [
+            "Histamine",
+            "Control",
+        ],
+        "Grasses": [
+            "Perennial Rye Grass",
+            "Barley Pollen",
+            "Wheat Triticum Vulgare",
+            "Bermuda",
+            "Bahia Grass / Paspalum",
+            "Johnsom / Sorgum",
+            "Timothy",
+            "Kentucky Blue",
+            "Yorkshire Fog",
+            "Oats Common",
+            "+",
+        ],
+        "Weeds": [
+            "Compositae",
+            "Dock / Sorrel",
+            "Chenopodium / Lambsquart",
+            "Ragweed",
+            "Plantain",
+            "Wall Pellitory",
+            "Sagebrush / Mugwart",
+            "+",
+        ],
+        "Moulds / Yeast": [
+            "Penicillium Mix",
+            "Mucor Racemosus",
+            "Rhizopus",
+            "Aspergillus",
+            "Alternaria",
+            "Candida albicans",
+            "Pullularia",
+            "Trichophyton mix",
+            "Helminthosporium mix",
+            "Cladosporium",
+            "+",
+        ],
+        "Dermatophyts": [
+            "House Dust Mix",
+            "Storage mites",
+            "D.Farinae",
+            "D.Pteronyssinus",
+            "+",
+        ],
+        "Animal Dander/Insects": [
+            "Cat",
+            "Dog",
+            "Cattle",
+            "Horse",
+            "Guinea Pig Hair",
+            "Feather Mix",
+            "Cockroach",
+            "Mosquito",
+            "+",
+        ],
+        "Miscellaneous": [
+            "Latex",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+            "+",
+        ],
+        "Grains & Yeast": [
+            "Yeast - Bakers",
+            "Yeast - Brewers",
+            "Corn - whole",
+            "Barley - whole",
+            "Rice",
+            "Wheat Grain",
+            "Cereal Mix",
+            "Rye - Wholegrain mix",
+            "+",
+        ],
+        "Dairy / Proteins": [
+            "Cows milk",
+            "Egg - white",
+            "Egg - yolk",
+            "Chicken",
+            "Beef",
+            "Pork",
+            "+",
+        ],
+        "Fruit & Vegetables": [
+            "Apple",
+            "Avocado",
+            "Banana",
+            "Bean (Green String)",
+            "Carrot",
+            "Celery",
+            "Kiwi Fruit",
+            "Mango",
+            "Melon",
+            "Orange",
+            "Peach",
+            "Potato",
+            "Strawberry",
+            "Tomato",
+            "+",
+        ],
+        "Nuts / Legumes": [
+            "Almond",
+            "Brazil",
+            "Cashew",
+            "Hazelnut",
+            "Walnut - black",
+            "Peanut",
+            "Pecan",
+            "Lupin",
+            "Pea",
+            "Soybean",
+            "+",
+        ],
+        "Seafood": [
+            "Codfish - mix",
+            "Tuna",
+            "Shrimp",
+            "Oyster",
+            "+",
+            "+",
+        ],
+        "Special Seeds": [
+            "Sunflower",
+            "Sesame - white",
+            "+",
+            "+",
+        ],
+    },
+    "Item":{
+        "All": ["All"],
+        "Apple": ["Xcode"],
+        "Other": ["Sublime Text", "WebStrom",]
+    }
+};
 
 
 export default class Allergen extends Component {
@@ -46,6 +190,10 @@ export default class Allergen extends Component {
         header: null,
         headerLeft: null,
     };
+
+    onPress(val) {
+        alert(val);
+    }
 
     render() {
         return (
@@ -59,27 +207,28 @@ export default class Allergen extends Component {
                                         <Icon name='arrow-back' />
                                     </Button>
                                 </Left>*/}
-                                <Left>
-                                </Left>
+                            <Left>
+                            </Left>
                             <Body>
                             <Title>Category</Title>
                             </Body>
 
                             <Right>
                                 <Button transparent>
-                                    <Icon style={{color:'#fff'}} name='list' />
+                                    <Icon style={{color: '#fff'}} name='list'/>
                                 </Button>
                             </Right>
                         </Header>
                     </StyleProvider>
 
-                    <StyleProvider style={getTheme(platform)}>
-                        <Container>
+                    <Container>
+                        <MenuList data={data} nSelected={1} tabSelected={0} click={this.onPress}/>
 
-                            <Container style={styles.list}>
+                        {/*<Container style={styles.list}>
 
-                                <Button style={styles.button} onPress={this.grasses}>
-                                    <Text>Grasses</Text>
+                                <Button vertical style={styles.button} onPress={this.grasses}>
+                                    <Icon style={style.Button_Icon} name='ios-add-circle' />
+                                    <Text style={style.Save_Button_Text}>Grasses</Text>
                                 </Button>
 
                                 <Button style={styles.button}>
@@ -154,9 +303,8 @@ export default class Allergen extends Component {
                                     <Text>Clear</Text>
                                 </Button>
 
-                            </Container>
-                        </Container>
-                    </StyleProvider>
+                            </Container>*/}
+                    </Container>
                 </View>
 
                 <StyleProvider style={getTheme(platform)}>
@@ -219,7 +367,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        margin:5,
+        margin: 5,
     },
 
     button: {

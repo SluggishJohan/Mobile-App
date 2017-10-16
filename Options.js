@@ -18,9 +18,6 @@ import {StackNavigator, NavigationActions} from 'react-navigation';
 import { Container, Header, Item, Input, Icon, Content, Footer, FooterTab, Badge } from 'native-base';
 
 
-
-
-
 export default class Options extends Component {
 
     static navigationOptions = {
