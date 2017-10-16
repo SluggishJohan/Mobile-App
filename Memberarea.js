@@ -32,6 +32,9 @@ import {
     CardItem,
     List, ListItem,
     Separator,
+    Left,
+    Right,
+    Title,
 } from 'native-base';
 
 import getTheme from './native-base-theme/components';
@@ -120,7 +123,7 @@ var options = {
 export default class Memberarea extends Component {
     static navigationOptions = {
         title: 'NewTest',
-        //header: null,
+        header: null,
         headerLeft: null,
     };
 
@@ -129,7 +132,21 @@ export default class Memberarea extends Component {
 
             <View style={style.pageContainer}>
 
+
                 <View style={style.contentContainer}>
+                    <StyleProvider style={getTheme(platform)}>
+                        <Header>
+                            {/*<Left>
+                                    <Button transparent>
+                                        <Icon name='arrow-back' />
+                                    </Button>
+                                </Left>*/}
+                            <Body>
+                            <Title>New Test</Title>
+                            </Body>
+                        </Header>
+                    </StyleProvider>
+
                     <ScrollView>
                         <StyleProvider style={getTheme(platform)}>
                             <Container style={style.lookup_container_NewTest}>
@@ -192,13 +209,13 @@ export default class Memberarea extends Component {
                                     <Icon active style={style.tabButton_Icon} name="paper"/>
                                     <Text style={style.tabButton_Text}>New Test </Text>
                                 </Button>
-                                <Button vertical active onPress={this.searchP}>
+                                <Button vertical onPress={this.searchP}>
                                     <Icon style={style.tabButton_Icon} name="paper"/>
                                     <Text style={style.tabButton_Text}>Records</Text>
                                 </Button>
 
 
-                                <Button vertical active onPress={this.more}>
+                                <Button vertical onPress={this.more}>
                                     <Icon style={style.tabButton_Icon} name="apps"/>
                                     <Text style={style.tabButton_Text}>More</Text>
                                 </Button>

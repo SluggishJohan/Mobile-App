@@ -4,10 +4,10 @@ import variable from "./../variables/platform";
 
 export default (variables = variable) => {
   const titleTheme = {
-    fontSize: variables.titleFontSize,
+    fontSize: 14,
     fontFamily: variables.titleFontfamily,
-    color: variables.titleFontColor,
-    fontWeight: Platform.OS === "ios" ? "600" : undefined,
+    color: '#FFFFFF',//variables.titleFontColor,
+    fontWeight: Platform.OS === "ios" ? "700" : undefined,
     textAlign: "center"
   };
 

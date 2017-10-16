@@ -130,11 +130,11 @@ export default {
   },
 
   // Footer
-  footerHeight: 27,
+  footerHeight: 10,
   footerDefaultBg: platform === "ios" ? "#F8F8F8" : "#4179F7",
 
   // FooterTab
-  tabBarTextColor: platform === "ios" ? "#0277BD" : "#b3c7f9",
+  tabBarTextColor: platform === "ios" ? "#757575" : "#b3c7f9",
   tabBarTextSize: platform === "ios" ? 10 : 11,
   activeTab: platform === "ios" ? "#0277BD" : "#fff",
   sTabBarActiveTextColor: "#0277BD",
@@ -151,7 +151,7 @@ export default {
 
   // Header
   toolbarBtnColor: platform === "ios" ? "#007aff" : "#fff",
-  toolbarDefaultBg: platform === "ios" ? "#F8F8F8" : "#3F51B5",
+  toolbarDefaultBg: platform === "ios" ? "rgba(21, 101, 192, 0.9)" : "#3F51B5",
   toolbarHeight: platform === "ios" ? 60 : 56,
   toolbarIconSize: platform === "ios" ? 16 : 22,
   toolbarSearchIconSize: platform === "ios" ? 16 : 23,
@@ -248,8 +248,8 @@ export default {
   noteFontSize: 14,
 
   // Title
-  titleFontfamily: platform === "ios" ? "System" : "Roboto_medium",
-  titleFontSize: platform === "ios" ? 17 : 19,
+  titleFontfamily: platform === "ios" ? "System" : "Apple SD Gothic Neo",
+  titleFontSize: platform === "ios" ? 15 : 19,
   subTitleFontSize: platform === "ios" ? 12 : 14,
   subtitleColor: platform === "ios" ? "#8e8e93" : "#FFF",
 

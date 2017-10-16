@@ -80,18 +80,10 @@ var style = StyleSheet.create({
 
 
     tabContainer: {
-        flex: 1,
+        flex: 1.25,
         justifyContent: 'center',
         alignItems:'center',
         backgroundColor: '#F5F5F5',
-    },
-
-    tabButton:{
-        fontSize: 8,
-        //height: 15,
-        //borderRadius: 10,
-        //borderWidth: 1,
-        //borderColor: 'rgba(253,254,254,0.3)',
     },
 
     tabButton_Icon:{

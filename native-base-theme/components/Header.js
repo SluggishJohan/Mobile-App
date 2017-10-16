@@ -28,6 +28,7 @@ export default (variables = variable) => {
 					fontSize: variables.titleFontSize - 2,
 					fontFamily: variables.titleFontfamily,
 					textAlign: "center",
+					fontWeight: 'bold',
 				},
 				"NativeBase.Subtitle": {
 					fontSize: variables.subTitleFontSize,
