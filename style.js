@@ -82,23 +82,23 @@ var style = StyleSheet.create({
     tabContainer: {
         flex: 1.25,
         justifyContent: 'center',
-        alignItems:'center',
+        alignItems: 'center',
         backgroundColor: '#F5F5F5',
     },
 
-    tabButton_Icon:{
+    tabButton_Icon: {
         fontSize: 20,
     },
 
-    tabButton_Text:{
+    tabButton_Text: {
         height: -3,
         fontSize: 8,
     },
 
     contentContainer: {
         flex: 11,
- /*       borderWidth: 1,
-        borderColor: 'rgba(213,0,0,1)',*/
+        /*       borderWidth: 1,
+               borderColor: 'rgba(213,0,0,1)',*/
     },
 
     headerContainer: {
@@ -120,27 +120,42 @@ var style = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         //alignItems: 'center',
-/*        borderWidth: 1,
-        borderColor: 'rgba(213,0,0,1)',*/
+        /*        borderWidth: 1,
+                borderColor: 'rgba(213,0,0,1)',*/
     },
 
-    addNewPatient_NewTest:{
-        height:785,
-/*        borderWidth: 1,
-        borderColor: 'rgba(213,0,0,1)',*/
+    addNewPatient_NewTest: {
+        height: 785,
+        /*        borderWidth: 1,
+                borderColor: 'rgba(213,0,0,1)',*/
     },
 
-    twoButtons_NewTest:{
-        height:40,
+    twoButtons_NewTest: {
+        height: 40,
         flexDirection: 'row',
         justifyContent: 'center',
-        //alignItems: 'center',
+        alignItems: 'center',
     },
 
     Button_Icon: {
         fontSize: 18,
-        margin: 0,
+        //marginLeft: 70,
         padding: 0,
+    },
+
+    Save_Button_Icon: {
+        fontSize: 13,
+        justifyContent: 'center',
+        alignSelf: 'center',
+    },
+
+    Save_Button_Text: {
+        //padding: 4,
+        color: '#fff',
+        fontWeight: 'bold',
+        margin: 0,
+        fontSize: 10,
+        fontFamily: 'Apple SD Gothic Neo',
     },
 
     Success_Image: {
@@ -170,6 +185,12 @@ var style = StyleSheet.create({
         alignSelf: 'center',
     },
 
+    segment_Text: {
+        fontSize: 12,
+        fontFamily:'Apple SD Gothic Neo',
+        fontWeight:'bold',
+        marginLeft: 20,
+    },
 
     heading_1: {
         fontSize: 20,

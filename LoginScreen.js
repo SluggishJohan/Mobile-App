@@ -1,138 +1,249 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-
 import React, {Component} from 'react';
 import {
-    Platform,
     AppRegistry,
     StyleSheet,
     Text,
     View,
-    ImageBackground,
-    TextInput,
-    TouchableOpacity,
+    Image,
     AsyncStorage,
-} from 'react-native';
+    TextInput,
+    DatePickerIOS,
+    TouchableOpacity,
+} from 'react-native'
 import {
     StackNavigator,
 } from 'react-navigation';
+import {
+    Container,
+    Header,
+    Left,
+    List,
+    ListItem,
+    Switch,
+    Item,
+    Input,
+    Icon,
+    Body,
+    Right,
+    Content,
+    Footer,
+    FooterTab,
+    Button,
+    Badge,
+    Segment,
+    StyleProvider,
+    Title,
+} from 'native-base';
 
-import * as firebase from 'firebase';
-// import {
-//   FB_API_KEY,
-//   FB_AUTH_DOMAIN,
-//   FB_DATABASE_URL,
-//   FB_STORAGE_BUCKET,
-// } from 'react-native-dotenv';
 import style from './style';
-import {Button} from 'react-native-elements';
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCgNLQyf0bim1ex8y3bDrZqcQrEJhb-wXM",
-    authDomain: "firereactbasenative.firebaseapp.com",
-    databaseURL: "https://mobile-app-c4df4.firebaseio.com",
-    storageBucket: ""
-    //  apiKey: FB_API_KEY,
-    //  authDomain: FB_AUTH_DOMAIN,
-    //  databaseURL: FB_DATABASE_URL,
-    //  storageBucket: FB_STORAGE_BUCKET,
-};
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+import getTheme from './native-base-theme/components';
+import platform from './native-base-theme/variables/platform';
 
 
-export default class LoginScreen extends Component<{}> {
-
+export default class Allergen extends Component {
     static navigationOptions = {
-        title: 'LoginScreen',
+        title: 'NewTest',
         header: null,
+        headerLeft: null,
     };
 
     render() {
-        const {navigate} = this.props.navigation;
-
         return (
             <View style={style.pageContainer}>
-                <ImageBackground source={require('./back.jpg')} style={style.backgroundImage_Login}>
-                    <View style={style.innerPageContainer_Login}>
+                <View style={style.contentContainer}>
 
-                        <View style={style.inputContainer_Login}>
-                            <Text style={style.logo1_Login}>Royal Adelaide Hospital</Text>
-                            <Text style={style.logo2_Login}>Prick Test Management System</Text>
-                            <TextInput
-                                underlineColorIos='transparent'
-                                style={style.inputbox_Login}
-                                placeholder='username'
-                                value={this.state.email}
-                                onChangeText={email => this.setState({email})}
-                            />
-                            <TextInput
-                                secureTextEntry={true}
-                                underlineColorIos='transparent'
-                                style={style.inputbox_Login}
-                                placeholder='password'
-                                autoCorrect={false}
-                                value={this.state.password}
-                                onChangeText={password => this.setState({password})}
-                            />
-                        </View>
-                        <View style={style.buttonContainer_Login}>
+                    <StyleProvider style={getTheme(platform)}>
+                        <Header>
+                            {/*<Left>
+                                    <Button transparent>
+                                        <Icon name='arrow-back' />
+                                    </Button>
+                                </Left>*/}
+                                <Left>
+                                </Left>
+                            <Body>
+                            <Title>Category</Title>
+                            </Body>
 
-                            <Button
-                                raised
-                                icon={{name: 'send'}}
-                                fontSize={12}
-                                textStyle={{fontWeight: 'bold',}}
-                                containerViewStyle={{alignItems: 'center'}}
-                                onPress={() => {
-                                    navigate('Memberarea')
-                                }}
-                                buttonStyle={style.Login_Button}
-                                title='Login'/>
-                        </View>
+                            <Right>
+                                <Button transparent>
+                                    <Icon style={{color:'#fff'}} name='list' />
+                                </Button>
+                            </Right>
+                        </Header>
+                    </StyleProvider>
 
-                    </View>
-                </ImageBackground>
+                    <StyleProvider style={getTheme(platform)}>
+                        <Container>
+
+                            <Container style={styles.list}>
+
+                                <Button style={styles.button} onPress={this.grasses}>
+                                    <Text>Grasses</Text>
+                                </Button>
+
+                                <Button style={styles.button}>
+                                    <Text>Weeds</Text>
+                                </Button>
+
+                                <Button style={styles.button}>
+                                    <Text>Trees</Text>
+                                </Button>
+
+                            </Container>
+
+                            <Container style={styles.list}>
+
+                                <Button style={styles.button}>
+                                    <Text>Moulds/ Yeast</Text>
+                                </Button>
+
+                                <Button style={styles.button}>
+                                    <Text>Dermatophyts</Text>
+                                </Button>
+
+                                <Button style={styles.button}>
+                                    <Text>Animal dander/ Insects</Text>
+                                </Button>
+
+                            </Container>
+
+                            <Container style={styles.list}>
+
+                                <Button style={styles.button}>
+                                    <Text>Miscellaneous</Text>
+                                </Button>
+
+                                <Button style={styles.button}>
+                                    <Text>Grains& Yeast</Text>
+                                </Button>
+
+                                <Button style={styles.button}>
+                                    <Text>Dairy/ Proteins</Text>
+                                </Button>
+
+                            </Container>
+
+                            <Container style={styles.list}>
+
+                                <Button style={styles.button}>
+                                    <Text>Fruit& Vegetables</Text>
+                                </Button>
+
+                                <Button style={styles.button}>
+                                    <Text>Nuts/ Legumes</Text>
+                                </Button>
+
+                                <Button style={styles.button}>
+                                    <Text>Seafood</Text>
+                                </Button>
+
+                            </Container>
+
+                            <Container style={styles.list}>
+
+                                <Button style={styles.button}>
+                                    <Text>Specials- Seeds</Text>
+                                </Button>
+
+                                <Button style={styles.save} onPress={this.addTest}>
+                                    <Text>Save</Text>
+                                </Button>
+
+                                <Button style={styles.clear}>
+                                    <Text>Clear</Text>
+                                </Button>
+
+                            </Container>
+                        </Container>
+                    </StyleProvider>
+                </View>
+
+                <StyleProvider style={getTheme(platform)}>
+                    <Container style={style.tabContainer}>
+                        <Footer>
+                            <FooterTab>
+                                <Button vertical active onPress={this.newT}>
+                                    <Icon active style={style.tabButton_Icon} name="person"/>
+                                    <Text style={style.tabButton_Text}>New Test </Text>
+                                </Button>
+                                <Button vertical onPress={this.searchP}>
+                                    <Icon style={style.tabButton_Icon} name="paper"/>
+                                    <Text style={style.tabButton_Text}>Records</Text>
+                                </Button>
+
+
+                                <Button vertical onPress={this.more}>
+                                    <Icon style={style.tabButton_Icon} name="apps"/>
+                                    <Text style={style.tabButton_Text}>More</Text>
+                                </Button>
+
+                            </FooterTab>
+                        </Footer>
+                    </Container>
+
+                </StyleProvider>
             </View>
         );
     }
 
-    constructor(props) {
-        super(props);
+    addTest = () => {
 
-        this.state = {username: '', password: '', error: '', loading: false};
+        this.props.navigation.navigate('TestAdded');
+    }
+    grasses = () => {
+
+        this.props.navigation.navigate('Grasses');
     }
 
-    login = () => {
+    searchP = () => {
 
-        this.setState({error: '', loading: true});
+        this.props.navigation.navigate('Options');
+    }
 
-        const {email, password} = this.state;
 
-        firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(() => {
-                this.setState({error: '', loading: false});
-                this.props.navigation.navigate('Memberarea');
-            })
-            .catch(() => {
-                //Login was not successful, let's create a new account
-                // firebase.auth().createUserWithEmailAndPassword(email, password)
-                //     .then(() => { this.setState({ error: '', loading: false }); })
-                //     .catch(() => {
-                this.setState({error: 'Authentication failed.', loading: false});
-                alert("Authentication failed, please try again!")
-                // });
-            });
+    newT = () => {
 
-        // if(true) {
-        //   this.props.navigation.navigate('Memberarea');
-        // } else {
-        //   alert("Username or password not match, please try again!");
-        // }
+        this.props.navigation.navigate('newTest');
+    }
+
+    more = () => {
+
+        this.props.navigation.navigate('More');
     }
 }
 
+const styles = StyleSheet.create({
 
+    list: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        margin:5,
+    },
+
+    button: {
+        height: 50,
+        width: '30%',
+        justifyContent: 'center',
+        margin: 5,
+        backgroundColor: '#a5c1ef',
+    },
+    save: {
+        backgroundColor: '#4286f4',
+        height: 50,
+        width: 98,
+        justifyContent: 'center',
+        margin: 5,
+
+    },
+    clear: {
+        backgroundColor: '#f44144',
+        height: 50,
+        width: 98,
+        justifyContent: 'center',
+        margin: 5,
+
+    },
+
+});

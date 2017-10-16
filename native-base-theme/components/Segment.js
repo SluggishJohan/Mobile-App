@@ -7,13 +7,15 @@ export default (variables = variable) => {
 		height: 45,
 		borderColor: variables.segmentBorderColorMain,
 		flexDirection: "row",
-		justifyContent: "center",
-		backgroundColor: variables.segmentBackgroundColor,
+		justifyContent: "flex-end",
+		backgroundColor: "transparent",
+        marginRight: 20,
+		//marginTop: 20,
 		"NativeBase.Button": {
 			alignSelf: "center",
 			borderRadius: 0,
-			paddingHorizontal: 20,
-			height: 30,
+			paddingHorizontal: 5,
+			height: 25,
 			backgroundColor: "transparent",
 			borderWidth: 1,
 			borderLeftWidth: 0,
@@ -36,7 +38,7 @@ export default (variables = variable) => {
 			},
 			"NativeBase.Text": {
 				color: variables.segmentTextColor,
-				fontSize: 14,
+				fontSize: 10,
 			},
 		},
 	};
